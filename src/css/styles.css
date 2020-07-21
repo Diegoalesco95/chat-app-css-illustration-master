@@ -6,7 +6,14 @@ body {
 
 main {
   width: 100vw;
-  height: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  height: 75%;
+  position: relative;
 }
 
 .attribution {
@@ -15,4 +22,42 @@ main {
 }
 .attribution a {
   color: #3e52a3;
+}
+
+.container__bg {
+  width: 100%;
+  height: 80%;
+  background: linear-gradient(225deg, #e942ff 0%, #8838ff 100%);
+  border-radius: 0 0 55% 55%;
+  position: absolute;
+  top: 0;
+  left: -50%;
+}
+
+.container__device {
+  width: 70%;
+  height: 1280px;
+  border-radius: 80px;
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  box-shadow: 16px 16px 64px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+.container__device--border {
+  width: 90%;
+  height: 95%;
+  margin: 5%;
+  border-radius: 40px;
+  position: relative;
+  background-color: #f5f3f7;
+}
+.container__device--border-notch {
+  width: 330px;
+  height: 60px;
+  border-radius: 40px;
+  position: absolute;
+  top: -18px;
+  left: 143px;
+  background-color: white;
 }
