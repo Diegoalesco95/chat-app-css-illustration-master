@@ -1,0 +1,85 @@
+.less-icon__container {
+  grid-column: 1 / 2;
+  margin: 0 auto;
+  position: relative;
+  .less-icon {
+    width: 2em;
+    height: 2em;
+    color: $color-white;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: 30%;
+      width: 1em;
+      height: 1em;
+      border-left: solid 3px currentColor;
+      border-top: solid 3px currentColor;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.more-icon__container {
+  grid-column: 4 / 5;
+  margin: 0 auto;
+  & .more-icon {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    border: solid 1px currentColor;
+    background-color: $color-white;
+    color: $color-white;
+    &:before {
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: -8px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      border: solid 1px currentColor;
+      background-color: $color-white;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: 6px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      border: solid 1px currentColor;
+      background-color: $color-white;
+    }
+  }
+}
+
+.send-button {
+  grid-column: 2 / 3;
+  width: 4em;
+  height: 4em;
+  margin: 0 auto;
+  border-radius: 50%;
+  position: relative;
+  background-color: $color-button-background;
+  & .send-icon {
+    width: 2em;
+    height: 2em;
+    color: $color-white;
+    &:after {
+      content: '';
+      border-radius: 5px;
+      position: absolute;
+      top: 35%;
+      left: 30%;
+      width: 1em;
+      height: 1em;
+      border-bottom: solid 4px currentColor;
+      border-right: solid 4px currentColor;
+      transform: rotate(-45deg);
+    }
+  }
+}

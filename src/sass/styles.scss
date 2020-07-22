@@ -1,4 +1,10 @@
 @import 'utils/variables';
+@import 'base/breakpoints';
 @import 'base/globals';
 @import 'layout/footer';
 @import 'components/app-view';
+@import 'components/status-bar';
+@import 'components/icons';
+@import 'components/chat';
+@import 'components/message';
+@import 'components/text-description';

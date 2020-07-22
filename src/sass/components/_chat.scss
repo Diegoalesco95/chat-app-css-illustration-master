@@ -1,0 +1,70 @@
+.chat-left {
+  width: 250px;
+  margin: 10px auto 10px 20px;
+  border-radius: 15px 15px 15px 5px;
+  background-color: $color-background-chat;
+  & p {
+    padding: 0 16px;
+    line-height: 1.6;
+    color: $color-chat-left;
+  }
+}
+
+.chat-right {
+  align-items: flex-end;
+  width: 250px;
+  margin: 10px 20px 10px auto;
+  border-radius: 15px 15px 5px 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-color: $color-white;
+  & p {
+    padding: 0 16px;
+    line-height: 1.6;
+    color: $color-chat-right;
+  }
+}
+
+.images-chat-container {
+  width: 300px;
+  margin: 10px 40px 10px auto;
+  display: flex;
+  & img {
+    width: 90px;
+    height: 90px;
+    border-radius: 16px;
+    margin: 0 10px;
+  }
+}
+
+.option {
+  width: 350px;
+  height: 80px;
+  display: grid;
+  border-radius: 20px 20px 20px 5px;
+  grid-template-columns: 0.2fr 1fr 0.5fr;
+  align-items: center;
+  background: linear-gradient(90deg, $color-gradient-1 0%, $color-gradient-2 100%);
+  & .radio-button {
+    grid-column: 1 / 2;
+    width: 20px;
+    height: 20px;
+    margin: 16px;
+    border-radius: 50%;
+    border: 1px solid $color-button-outline;
+  }
+  & p {
+    margin: 0;
+    padding: 0;
+    grid-column: 2 / 3;
+    color: $color-white;
+    font-weight: 400;
+  }
+  & .price {
+    & h2 {
+      margin: 0 auto;
+      grid-column: 3 / 4;
+      color: $color-white;
+      font-weight: 700;
+    }
+  }
+}

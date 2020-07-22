@@ -3,3 +3,44 @@ section.container
   .container__device
     .container__device--border
       .container__device--border-notch
+      .container__device--border-status-bar
+        .status-bar
+          .less-icon__container
+            .less-icon
+          .avatar
+            img(src="./src/assets/images/avatar.jpg", alt="avatar")
+          .name-avatar
+            h1 Samuel Green
+            p Avaiolable to Walk
+          .more-icon__container
+            .more-icon
+      .container__device--border-chat
+        .chat-left
+          p That sounds great. I’d be happy with that.
+        .chat-left
+          p Could you send over some pictures of your dog, please?
+        .images-chat-container
+          img(src="./src/assets/images/dog-image-1.jpg", alt="alt")
+          img(src="./src/assets/images/dog-image-2.jpg", alt="alt")
+          img(src="./src/assets/images/dog-image-3.jpg", alt="alt")
+        .chat-right
+          p Here are a few pictures. She’s a happy girl!
+        .chat-right
+          p Can you make it?
+        .chat-left
+          p She looks so happy! The time we discussed works. How long shall I take her out for?
+        .chat-left.option
+          .radio-button
+          p 30 minutes walk
+          .price 
+            h2 $29
+        .chat-left.option
+          .radio-button
+          p 1 hour walk
+          .price 
+            h2 $49
+      .container__device--border-message
+        .box-message
+          p Type a message...
+          .send-button
+            .send-icon

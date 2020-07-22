@@ -9,9 +9,23 @@ main {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  @include media(laptop-l) {
+    flex-direction: row;
+  }
 }
 
-section {
-  height: 75%;
+.container {
+  height: 70%;
   position: relative;
+  @include media(laptop-l) {
+    height: 100%;
+  }
+}
+
+.description__container {
+  height: 30%;
+  position: relative;
+  @include media(laptop-l) {
+    height: 100%;
+  }
 }
