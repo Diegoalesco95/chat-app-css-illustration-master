@@ -18,6 +18,16 @@
       transform: rotate(-45deg);
     }
   }
+  @include media(laptop) {
+    .less-icon {
+      width: 1em;
+      height: 1em;
+      &:before {
+        width: 0.5em;
+        height: 0.5em;
+      }
+    }
+  }
 }
 
 .more-icon__container {
@@ -55,6 +65,20 @@
       background-color: $color-white;
     }
   }
+  @include media(laptop) {
+    & .more-icon {
+      width: 2px;
+      height: 2px;
+      &:before {
+        width: 2px;
+        height: 2px;
+      }
+      &:after {
+        width: 2px;
+        height: 2px;
+      }
+    }
+  }
 }
 
 .send-button {
@@ -80,6 +104,19 @@
       border-bottom: solid 4px currentColor;
       border-right: solid 4px currentColor;
       transform: rotate(-45deg);
+    }
+  }
+  @include media(laptop) {
+    grid-column: 2 / 3;
+    width: 2em;
+    height: 2em;
+    & .send-icon {
+      width: 1em;
+      height: 1em;
+      &:after {
+        width: 0.5em;
+        height: 0.5em;
+      }
     }
   }
 }

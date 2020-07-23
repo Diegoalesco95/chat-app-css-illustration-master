@@ -10,29 +10,31 @@ main {
   display: flex;
   flex-direction: column;
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1024px) {
   main {
-    flex-direction: row;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 .container {
-  height: 70%;
+  height: 70vh;
   position: relative;
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1024px) {
   .container {
-    height: 100%;
+    height: 100vh;
   }
 }
 
 .description__container {
-  height: 30%;
+  height: 30vh;
   position: relative;
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1024px) {
   .description__container {
-    height: 100%;
+    height: 100vh;
   }
 }
 
@@ -53,16 +55,16 @@ main {
   top: 0;
   left: -50%;
 }
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1024px) {
   .container__bg {
     width: 500px;
-    left: 0;
+    left: -10%;
   }
 }
 
 .container__device {
   width: 588px;
-  max-height: 1180px;
+  height: 1180px;
   border-radius: 80px;
   position: absolute;
   top: 10%;
@@ -105,6 +107,35 @@ main {
   height: 136px;
   border-radius: 0 0 40px 40px;
 }
+@media only screen and (min-width: 1024px) {
+  .container__device {
+    width: 300px;
+    height: 600px;
+    left: 50%;
+    border-radius: 40px;
+  }
+  .container__device--border {
+    border-radius: 25px;
+  }
+  .container__device--border-notch {
+    width: 130px;
+    height: 20px;
+    border-radius: 25px;
+    top: -8px;
+    left: 70px;
+  }
+  .container__device--border-status-bar {
+    height: 70px;
+  }
+  .container__device--border-chat {
+    height: 425px;
+    padding: 8px 0px 0;
+  }
+  .container__device--border-message {
+    height: 68px;
+    border-radius: 0 0 20px 20px;
+  }
+}
 
 .status-bar {
   height: 100px;
@@ -112,6 +143,12 @@ main {
   grid-template-columns: 0.15fr 0.2fr 1fr 0.1fr;
   align-items: center;
   padding: 40px 20px;
+}
+@media only screen and (min-width: 1024px) {
+  .status-bar {
+    height: 50px;
+    padding: 10px;
+  }
 }
 
 .avatar {
@@ -128,6 +165,13 @@ main {
   height: 100%;
   border-radius: 50%;
 }
+@media only screen and (min-width: 1024px) {
+  .avatar {
+    width: 25px;
+    height: 25px;
+    border: 2px solid white;
+  }
+}
 
 .name-avatar {
   grid-column: 3/4;
@@ -141,6 +185,22 @@ main {
   margin-top: 8px;
   color: #d89eff;
   font-weight: 400px;
+}
+@media only screen and (min-width: 1024px) {
+  .name-avatar {
+    margin-left: 10px;
+  }
+  .name-avatar h1 {
+    font-size: 1em;
+    margin-bottom: 4px;
+    color: white;
+  }
+  .name-avatar p {
+    font-size: 0.8em;
+    margin-top: 2px;
+    color: #d89eff;
+    font-weight: 400px;
+  }
 }
 
 .less-icon__container {
@@ -163,6 +223,16 @@ main {
   border-left: solid 3px currentColor;
   border-top: solid 3px currentColor;
   transform: rotate(-45deg);
+}
+@media only screen and (min-width: 1024px) {
+  .less-icon__container .less-icon {
+    width: 1em;
+    height: 1em;
+  }
+  .less-icon__container .less-icon:before {
+    width: 0.5em;
+    height: 0.5em;
+  }
 }
 
 .more-icon__container {
@@ -200,6 +270,20 @@ main {
   border: solid 1px currentColor;
   background-color: white;
 }
+@media only screen and (min-width: 1024px) {
+  .more-icon__container .more-icon {
+    width: 2px;
+    height: 2px;
+  }
+  .more-icon__container .more-icon:before {
+    width: 2px;
+    height: 2px;
+  }
+  .more-icon__container .more-icon:after {
+    width: 2px;
+    height: 2px;
+  }
+}
 
 .send-button {
   grid-column: 2/3;
@@ -227,9 +311,25 @@ main {
   border-right: solid 4px currentColor;
   transform: rotate(-45deg);
 }
+@media only screen and (min-width: 1024px) {
+  .send-button {
+    grid-column: 2/3;
+    width: 2em;
+    height: 2em;
+  }
+  .send-button .send-icon {
+    width: 1em;
+    height: 1em;
+  }
+  .send-button .send-icon:after {
+    width: 0.5em;
+    height: 0.5em;
+  }
+}
 
 .chat-left {
-  width: 250px;
+  width: auto;
+  max-width: 250px;
   margin: 10px auto 10px 20px;
   border-radius: 15px 15px 15px 5px;
   background-color: #eee5f5;
@@ -239,10 +339,22 @@ main {
   line-height: 1.6;
   color: #9241c8;
 }
+@media only screen and (min-width: 1024px) {
+  .chat-left {
+    max-width: 125px;
+    margin: 5px auto 5px 10px;
+    border-radius: 7px 7px 7px 3px;
+  }
+  .chat-left p {
+    font-size: 0.6em;
+    padding: 0 8px;
+    line-height: 1.2;
+  }
+}
 
 .chat-right {
-  align-items: flex-end;
-  width: 250px;
+  width: auto;
+  max-width: 250px;
   margin: 10px 20px 10px auto;
   border-radius: 15px 15px 5px 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -252,6 +364,19 @@ main {
   padding: 0 16px;
   line-height: 1.6;
   color: #6e5d7e;
+}
+@media only screen and (min-width: 1024px) {
+  .chat-right {
+    max-width: 125px;
+    margin: 5px 10px 5px auto;
+    border-radius: 7px 7px 3px 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .chat-right p {
+    font-size: 0.6em;
+    padding: 0 8px;
+    line-height: 1.2;
+  }
 }
 
 .images-chat-container {
@@ -265,9 +390,22 @@ main {
   border-radius: 16px;
   margin: 0 10px;
 }
+@media only screen and (min-width: 1024px) {
+  .images-chat-container {
+    width: 150px;
+    margin: 5px 20px 5px auto;
+  }
+  .images-chat-container img {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    margin: 0 5px;
+  }
+}
 
 .option {
   width: 350px;
+  max-width: 350px;
   height: 80px;
   display: grid;
   border-radius: 20px 20px 20px 5px;
@@ -296,6 +434,21 @@ main {
   color: white;
   font-weight: 700;
 }
+@media only screen and (min-width: 1024px) {
+  .option {
+    width: 175px;
+    height: 40px;
+    border-radius: 10px 10px 10px 3px;
+  }
+  .option .radio-button {
+    width: 10px;
+    height: 10px;
+    margin: 8px;
+  }
+  .option .price h2 {
+    font-size: 0.9em;
+  }
+}
 
 .box-message {
   width: 94%;
@@ -310,6 +463,13 @@ main {
 .box-message p {
   margin: 0 40px;
   color: #c6cacd;
+}
+@media only screen and (min-width: 1024px) {
+  .box-message {
+    height: 60%;
+    margin-top: 5%;
+    border-radius: 25px;
+  }
 }
 
 .description__container--heading {
@@ -326,4 +486,18 @@ main {
   text-align: center;
   font-weight: 400;
   color: #a39daa;
+}
+@media only screen and (min-width: 1024px) {
+  .description__container--heading {
+    margin: 40% 20% 0 10%;
+    font-size: 2.5em;
+    text-align: left;
+    font-weight: 500;
+  }
+  .description__container--description {
+    margin: 5% 30% 0 10%;
+    font-size: 1em;
+    line-height: 1.8;
+    text-align: left;
+  }
 }

@@ -9,23 +9,34 @@ main {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  @include media(laptop-l) {
-    flex-direction: row;
+  // @include media(tablet) {
+  //   height: 100%;
+  // }
+  @include media(laptop) {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 .container {
-  height: 70%;
+  height: 70vh;
   position: relative;
-  @include media(laptop-l) {
-    height: 100%;
+  // @include media(tablet) {
+  //   height: 130vh;
+  // }
+  @include media(laptop) {
+    height: 100vh;
   }
 }
 
 .description__container {
-  height: 30%;
+  height: 30vh;
   position: relative;
-  @include media(laptop-l) {
-    height: 100%;
+  // @include media(tablet) {
+  //   height: 70vh;
+  // }
+  @include media(laptop) {
+    height: 100vh;
   }
 }
