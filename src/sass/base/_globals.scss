@@ -4,8 +4,10 @@ html {
 
 body {
   font-size: 1.6rem;
+  line-height: 1.75;
   background-color: $color-white;
   font-family: $family;
+  color: $color-paragraph;
 }
 
 main {
@@ -53,14 +55,3 @@ main {
   align-items: center;
   justify-content: center;
 }
-
-// .description__container {
-//   height: 30vh;
-//   position: relative;
-//   // @include media(tablet) {
-//   //   height: 70vh;
-//   // }
-//   @include media(laptop) {
-//     height: 100vh;
-//   }
-// }

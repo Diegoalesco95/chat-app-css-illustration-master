@@ -38,35 +38,29 @@
                 <div class="chat-left">
                   <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
                 </div>
-                <div class="chat-left option">
-                  <div class="radio-button"></div>
-                  <p>30 minutes walk</p>
-                  <div class="price"> 
-                    <h2>$29</h2>
+                <form name="options">
+                  <div class="chat-left option">
+                    <label>
+                      <input class="radio-button" type="radio"><span class="message">30 minutes walk</span><span class="price">$29</span><span class="custom-radio"></span>
+                    </label>
                   </div>
-                </div>
-                <div class="chat-left option">
-                  <div class="radio-button"></div>
-                  <p>1 hour walk</p>
-                  <div class="price"> 
-                    <h2>$49</h2>
+                  <div class="chat-left option">
+                    <label>
+                      <input class="radio-button" type="radio"><span class="message">1 hour walk</span><span class="price">$49</span><span class="custom-radio"></span>
+                    </label>
                   </div>
-                </div>
+                </form>
               </div>
-              <div class="app__screen-message">
-                <div class="box-message">
-                  <p>Type a message...</p>
-                  <div class="send-button">
-                    <div class="send-icon"></div>
-                  </div>
-                </div>
-              </div>
+              <form class="app__message">
+                <input class="box-message" type="text" placeholder="Type a message">
+                <button class="send-button"><span class="send-icon"></span></button>
+              </form>
             </div>
           </div>
         </div>
-        <div class="container__description">
-          <h1 class="description__container--heading">Simple booking</h1>
-          <p class="description__container--description">Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.</p>
+        <div class="description">
+          <h1 class="description__heading">Simple booking</h1>
+          <p class="description__text">Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.</p>
         </div>
       </section>
     </main>

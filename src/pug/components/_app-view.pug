@@ -25,18 +25,20 @@
           p Can you make it?
         .chat-left
           p She looks so happy! The time we discussed works. How long shall I take her out for?
-        .chat-left.option
-          .radio-button
-          p 30 minutes walk
-          .price 
-            h2 $29
-        .chat-left.option
-          .radio-button
-          p 1 hour walk
-          .price 
-            h2 $49
-      .app__screen-message
-        .box-message
-          p Type a message...
-          .send-button
-            .send-icon
+        form(name="options")
+          .chat-left.option
+            label
+              input(type="radio").radio-button
+              span.message 30 minutes walk
+              span.price $29
+              span.custom-radio
+          .chat-left.option
+            label
+              input(type="radio").radio-button
+              span.message 1 hour walk
+              span.price $49
+              span.custom-radio
+      form.app__message
+        input(type="text" placeholder="Type a message").box-message
+        button.send-button
+          span.send-icon

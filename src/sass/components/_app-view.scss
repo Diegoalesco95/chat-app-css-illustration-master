@@ -48,9 +48,8 @@
         overflow: hidden;
       }
       &__message {
-        width: 100%;
-        height: 136px;
-        border-radius: 0 0 40px 40px;
+        margin: 0.8rem 0.7rem 1.1rem;
+        position: relative;
       }
       // @include media(laptop) {
       //   &-notch {
@@ -74,13 +73,13 @@
       // }
     }
   }
-  @include media(laptop) {
-    width: 300px;
-    height: 600px;
-    left: 50%;
-    border-radius: 40px;
-    &--screen {
-      border-radius: 25px;
-    }
-  }
+  // @include media(laptop) {
+  //   width: 300px;
+  //   height: 600px;
+  //   left: 50%;
+  //   border-radius: 40px;
+  //   &--screen {
+  //     border-radius: 25px;
+  //   }
+  // }
 }

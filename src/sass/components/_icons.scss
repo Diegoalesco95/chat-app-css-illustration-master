@@ -69,41 +69,46 @@
 }
 
 .send-button {
-  grid-column: 2 / 3;
-  width: 4em;
-  height: 4em;
-  margin: 0 auto;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0;
+  border: 0;
   border-radius: 50%;
-  position: relative;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
   background-color: $color-button-background;
   & .send-icon {
-    width: 2em;
-    height: 2em;
-    color: $color-white;
+    display: inline-block;
+    &:before,
     &:after {
       content: '';
-      border-radius: 5px;
-      position: absolute;
-      top: 35%;
-      left: 30%;
-      width: 1em;
-      height: 1em;
-      border-bottom: solid 4px currentColor;
-      border-right: solid 4px currentColor;
+      width: 0.7rem;
+      height: 0.2rem;
+      margin: 0.2rem;
+      display: block;
+      background-color: $color-white;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
       transform: rotate(-45deg);
     }
   }
-  @include media(laptop) {
-    grid-column: 2 / 3;
-    width: 2em;
-    height: 2em;
-    & .send-icon {
-      width: 1em;
-      height: 1em;
-      &:after {
-        width: 0.5em;
-        height: 0.5em;
-      }
-    }
-  }
+  // @include media(laptop) {
+  //   grid-column: 2 / 3;
+  //   width: 2em;
+  //   height: 2em;
+  //   & .send-icon {
+  //     width: 1em;
+  //     height: 1em;
+  //     &:after {
+  //       width: 0.5em;
+  //       height: 0.5em;
+  //     }
+  //   }
+  // }
 }
