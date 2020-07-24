@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/images/favicon-32x32.png">
     <title>Frontend Mentor | Chat app CSS illustration</title>
     <link href="src/css/normalize.css" rel="stylesheet">
@@ -11,71 +12,62 @@
   <body>
     <main>
       <section class="container">
-        <div class="container__bg"></div>
         <div class="container__device">
-          <div class="container__device--border">
-            <div class="container__device--border-notch"></div>
-            <div class="container__device--border-status-bar">
-              <div class="status-bar">
-                <div class="less-icon__container">
-                  <div class="less-icon"></div>
-                </div>
+          <div class="container__device--screen">
+            <div class="app">
+              <div class="app__status-bar"><span class="less-icon"></span>
                 <div class="avatar"><img src="./src/assets/images/avatar.jpg" alt="avatar"></div>
                 <div class="name-avatar">
-                  <h1>Samuel Green</h1>
-                  <p>Avaiolable to Walk</p>
+                  <h1>Samuel Green</h1><small>Available to Walk</small>
+                </div><span class="more-icon__container"><span class="more-icon"></span></span>
+              </div>
+              <div class="app__chat">
+                <div class="chat-left">
+                  <p>That sounds great. I’d be happy with that.</p>
                 </div>
-                <div class="more-icon__container">
-                  <div class="more-icon"></div>
+                <div class="chat-left">
+                  <p>Could you send over some pictures of your dog, please?</p>
                 </div>
-              </div>
-            </div>
-            <div class="container__device--border-chat">
-              <div class="chat-left">
-                <p>That sounds great. I’d be happy with that.</p>
-              </div>
-              <div class="chat-left">
-                <p>Could you send over some pictures of your dog, please?</p>
-              </div>
-              <div class="images-chat-container"><img src="./src/assets/images/dog-image-1.jpg" alt="alt"><img src="./src/assets/images/dog-image-2.jpg" alt="alt"><img src="./src/assets/images/dog-image-3.jpg" alt="alt"></div>
-              <div class="chat-right">
-                <p>Here are a few pictures. She’s a happy girl!</p>
-              </div>
-              <div class="chat-right">
-                <p>Can you make it?</p>
-              </div>
-              <div class="chat-left">
-                <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
-              </div>
-              <div class="chat-left option">
-                <div class="radio-button"></div>
-                <p>30 minutes walk</p>
-                <div class="price"> 
-                  <h2>$29</h2>
+                <div class="images-chat-container"><img src="./src/assets/images/dog-image-1.jpg" alt="alt"><img src="./src/assets/images/dog-image-2.jpg" alt="alt"><img src="./src/assets/images/dog-image-3.jpg" alt="alt"></div>
+                <div class="chat-right">
+                  <p>Here are a few pictures. She’s a happy girl!</p>
                 </div>
-              </div>
-              <div class="chat-left option">
-                <div class="radio-button"></div>
-                <p>1 hour walk</p>
-                <div class="price"> 
-                  <h2>$49</h2>
+                <div class="chat-right">
+                  <p>Can you make it?</p>
+                </div>
+                <div class="chat-left">
+                  <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+                </div>
+                <div class="chat-left option">
+                  <div class="radio-button"></div>
+                  <p>30 minutes walk</p>
+                  <div class="price"> 
+                    <h2>$29</h2>
+                  </div>
+                </div>
+                <div class="chat-left option">
+                  <div class="radio-button"></div>
+                  <p>1 hour walk</p>
+                  <div class="price"> 
+                    <h2>$49</h2>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="container__device--border-message">
-              <div class="box-message">
-                <p>Type a message...</p>
-                <div class="send-button">
-                  <div class="send-icon"></div>
+              <div class="app__screen-message">
+                <div class="box-message">
+                  <p>Type a message...</p>
+                  <div class="send-button">
+                    <div class="send-icon"></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="description__container">
-        <h1 class="description__container--heading">Simple booking</h1>
-        <p class="description__container--description">Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.</p>
+        <div class="container__description">
+          <h1 class="description__container--heading">Simple booking</h1>
+          <p class="description__container--description">Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.</p>
+        </div>
       </section>
     </main>
     <footer class="attribution"> <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a></span><span>Coded by <a href="https://github.com/Diegoalesco95/">Diegoalesco95</a></span></footer>
