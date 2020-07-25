@@ -35,6 +35,16 @@ main::before {
   transform: translateX(-100%);
   background: linear-gradient(180deg, #e942ff, #8838ff);
 }
+@media (min-width: 768px) {
+  main::before {
+    transform: translateX(calc(-100% - 6.6rem));
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main::before {
+    transform: translate(calc(-100% - 30rem), 30rem);
+  }
+}
 main::after {
   border-radius: 50vw 50vw 0 0;
   right: 50%;
@@ -42,6 +52,16 @@ main::after {
   z-index: -1;
   transform: translate(100%);
   background-color: #f5f3f7;
+}
+@media (min-width: 768px) {
+  main::after {
+    transform: translate(calc(100% + 5rem));
+  }
+}
+@media only screen and (min-width: 1024px) {
+  main::after {
+    transform: translate(calc(100% + 39.5rem), -28rem);
+  }
 }
 
 .container {
@@ -54,13 +74,11 @@ main::after {
   align-items: center;
   justify-content: center;
 }
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: #3e52a3;
+@media only screen and (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .container__device {
@@ -100,6 +118,7 @@ main::after {
   -webkit-user-select: none;
           user-select: none;
   background-color: #f5f3f7;
+  overflow: hidden;
 }
 .container__device--screen .app__status-bar {
   padding: 3rem 1.1rem 1.2rem 0.9rem;
@@ -119,6 +138,12 @@ main::after {
 .container__device--screen .app__message {
   margin: 0.8rem 0.7rem 1.1rem;
   position: relative;
+}
+@media only screen and (min-width: 1024px) {
+  .container__device {
+    margin-left: 9.9rem;
+    margin-bottom: 0;
+  }
 }
 
 .avatar {
@@ -266,11 +291,20 @@ main::after {
   margin: 1rem 0.8rem 1rem auto;
   display: flex;
 }
-.images-chat-container img {
+.images-chat-container .image {
   width: 4rem;
-  height: 4rem;
   border-radius: 0.8rem;
   margin-right: 1rem;
+  overflow: hidden;
+}
+.images-chat-container img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+  transition: 0.5s;
+}
+.images-chat-container img:hover {
+  transform: scale(1.5);
 }
 
 .option {
@@ -350,4 +384,30 @@ main::after {
   line-height: 1.2;
   font-weight: 500;
   color: #3e2753;
+}
+@media only screen and (min-width: 1024px) {
+  .description {
+    text-align: left;
+  }
+  .description__heading {
+    font-size: 4rem;
+  }
+}
+
+.attribution {
+  height: 4rem;
+  padding: 2rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #8838ff, #8838ff);
+}
+.attribution span {
+  color: #d89eff;
+}
+.attribution a {
+  margin: 0 0.4rem;
+  text-decoration: none;
+  color: white;
 }

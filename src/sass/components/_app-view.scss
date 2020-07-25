@@ -32,6 +32,7 @@
       line-height: 1.5;
       user-select: none;
       background-color: $color-background;
+      overflow: hidden;
       &__status-bar {
         padding: 3rem 1.1rem 1.2rem 0.9rem;
         border-radius: 0 0 0.5rem 0.5rem;
@@ -51,35 +52,10 @@
         margin: 0.8rem 0.7rem 1.1rem;
         position: relative;
       }
-      // @include media(laptop) {
-      //   &-notch {
-      //     width: 130px;
-      //     height: 20px;
-      //     border-radius: 25px;
-      //     top: -8px;
-      //     left: 70px;
-      //   }
-      //   &-status-bar {
-      //     height: 70px;
-      //   }
-      //   &-chat {
-      //     height: 425px;
-      //     padding: 8px 0px 0;
-      //   }
-      //   &-message {
-      //     height: 68px;
-      //     border-radius: 0 0 20px 20px;
-      //   }
-      // }
     }
   }
-  // @include media(laptop) {
-  //   width: 300px;
-  //   height: 600px;
-  //   left: 50%;
-  //   border-radius: 40px;
-  //   &--screen {
-  //     border-radius: 25px;
-  //   }
-  // }
+  @include media(laptop) {
+    margin-left: 9.9rem;
+    margin-bottom: 0;
+  }
 }

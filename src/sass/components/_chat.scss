@@ -13,17 +13,6 @@
   border-radius: 1rem 1rem 1rem 0.4rem;
   color: $color-chat-left;
   background-color: $color-background-chat;
-
-  // @include media(laptop) {
-  //   max-width: 125px;
-  //   margin: 5px auto 5px 10px;
-  //   border-radius: 7px 7px 7px 3px;
-  //   & p {
-  //     font-size: 0.6em;
-  //     padding: 0 8px;
-  //     line-height: 1.2;
-  //   }
-  // }
 }
 
 .chat-right {
@@ -34,39 +23,27 @@
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.08);
   color: $color-chat-right;
   background-color: $color-white;
-  // @include media(laptop) {
-  //   max-width: 125px;
-  //   margin: 5px 10px 5px auto;
-  //   border-radius: 7px 7px 3px 7px;
-  //   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  //   & p {
-  //     font-size: 0.6em;
-  //     padding: 0 8px;
-  //     line-height: 1.2;
-  //   }
-  // }
 }
 
 .images-chat-container {
   width: 14.4rem;
   margin: 1rem 0.8rem 1rem auto;
   display: flex;
-  & img {
+  & .image {
     width: 4rem;
-    height: 4rem;
     border-radius: 0.8rem;
     margin-right: 1rem;
+    overflow: hidden;
   }
-  // @include media(laptop) {
-  //   width: 150px;
-  //   margin: 5px 20px 5px auto;
-  //   & img {
-  //     width: 45px;
-  //     height: 45px;
-  //     border-radius: 8px;
-  //     margin: 0 5px;
-  //   }
-  // }
+  & img {
+    height: auto;
+    max-width: 100%;
+    display: block;
+    transition: 0.5s;
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
 }
 
 .option {
@@ -117,19 +94,4 @@
       }
     }
   }
-  // @include media(laptop) {
-  //   width: 175px;
-  //   height: 40px;
-  //   border-radius: 10px 10px 10px 3px;
-  //   & .radio-button {
-  //     width: 10px;
-  //     height: 10px;
-  //     margin: 8px;
-  //   }
-  //   & .price {
-  //     & h2 {
-  //       font-size: 0.9em;
-  //     }
-  //   }
-  // }
 }

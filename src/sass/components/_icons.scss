@@ -15,16 +15,6 @@
   &:after {
     transform: rotate(60deg);
   }
-  // @include media(laptop) {
-  //   .less-icon {
-  //     width: 1em;
-  //     height: 1em;
-  //     &:before {
-  //       width: 0.5em;
-  //       height: 0.5em;
-  //     }
-  //   }
-  // }
 }
 
 .more-icon__container {
@@ -98,17 +88,4 @@
       transform: rotate(-45deg);
     }
   }
-  // @include media(laptop) {
-  //   grid-column: 2 / 3;
-  //   width: 2em;
-  //   height: 2em;
-  //   & .send-icon {
-  //     width: 1em;
-  //     height: 1em;
-  //     &:after {
-  //       width: 0.5em;
-  //       height: 0.5em;
-  //     }
-  //   }
-  // }
 }

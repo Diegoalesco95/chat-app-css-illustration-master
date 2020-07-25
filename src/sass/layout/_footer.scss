@@ -1,7 +1,17 @@
 .attribution {
-  font-size: 11px;
-  text-align: center;
+  height: 4rem;
+  padding: 2rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, $color-gradient-2, $color-gradient-2);
+  & span {
+    color: $color-sub-heading;
+  }
   & a {
-    color: hsl(228, 45%, 44%);
+    margin: 0 0.4rem;
+    text-decoration: none;
+    color: $color-white;
   }
 }
