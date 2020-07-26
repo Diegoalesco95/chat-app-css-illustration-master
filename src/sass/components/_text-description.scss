@@ -4,13 +4,23 @@
   &__heading,
   &__text {
     margin: 0;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.31, 0.15, 0.56, 1.45);
+    animation-fill-mode: backwards;
   }
   &__heading {
     margin-bottom: 2.4rem;
-    font-size: 3.5rem;
+    font-size: 4.2rem;
     line-height: 1.2;
     font-weight: 500;
     color: $color-main-heading;
+    animation-name: headingAnimation;
+    animation-timing-function: cubic-bezier(0.31, 0.15, 0.56, 1.45);
+  }
+  &__text {
+    animation-name: textAnimation;
+    animation-delay: 0.3s;
+    animation-timing-function: linear;
   }
   @include media(laptop) {
     text-align: left;

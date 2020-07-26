@@ -39,8 +39,10 @@
         display: flex;
         align-items: center;
         background: linear-gradient(90deg, $color-gradient-2 0%, $color-gradient-1 100%);
+        animation: statusBar 0.6s backwards;
       }
       &__chat {
+        max-height: 38.8rem;
         margin: 0 0.7rem;
         display: flex;
         justify-content: flex-end;
@@ -51,6 +53,8 @@
       &__message {
         margin: 0.8rem 0.7rem 1.1rem;
         position: relative;
+        animation: messageBar 0.6s backwards;
+        animation-delay: 1s;
       }
     }
   }

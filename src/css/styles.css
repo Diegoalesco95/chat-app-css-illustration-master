@@ -26,6 +26,9 @@ main::before, main::after {
   min-width: 51rem;
   position: absolute;
   z-index: -1;
+  animation-duration: 4s;
+  animation-delay: 0.6s;
+  animation-fill-mode: backwards;
 }
 main::before {
   border-radius: 0 0 50vw 50vw;
@@ -34,6 +37,7 @@ main::before {
   left: 50%;
   transform: translateX(-100%);
   background: linear-gradient(180deg, #e942ff, #8838ff);
+  animation-name: main-left;
 }
 @media (min-width: 768px) {
   main::before {
@@ -52,6 +56,7 @@ main::after {
   z-index: -1;
   transform: translate(100%);
   background-color: #f5f3f7;
+  animation-name: main-right;
 }
 @media (min-width: 768px) {
   main::after {
@@ -126,8 +131,10 @@ main::after {
   display: flex;
   align-items: center;
   background: linear-gradient(90deg, #8838ff 0%, #e942ff 100%);
+  animation: statusBar 0.6s backwards;
 }
 .container__device--screen .app__chat {
+  max-height: 38.8rem;
   margin: 0 0.7rem;
   display: flex;
   justify-content: flex-end;
@@ -138,6 +145,8 @@ main::after {
 .container__device--screen .app__message {
   margin: 0.8rem 0.7rem 1.1rem;
   position: relative;
+  animation: messageBar 0.6s backwards;
+  animation-delay: 1s;
 }
 @media only screen and (min-width: 1024px) {
   .container__device {
@@ -261,8 +270,13 @@ main::after {
   transform: rotate(-45deg);
 }
 
-.chat-left p,
-.chat-right p {
+.chat-left,
+.chat-right {
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+}
+.chat-left .chat-text,
+.chat-right .chat-text {
   padding: 0 0.8rem;
   line-height: 1.5;
 }
@@ -274,6 +288,8 @@ main::after {
   border-radius: 1rem 1rem 1rem 0.4rem;
   color: #9241c8;
   background-color: #eee5f5;
+  animation-name: chat-left;
+  animation-delay: 0.25s;
 }
 
 .chat-right {
@@ -284,12 +300,16 @@ main::after {
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.08);
   color: #6e5d7e;
   background-color: white;
+  animation-name: chat-right;
+  animation-delay: 0.5s;
 }
 
 .images-chat-container {
   width: 14.4rem;
   margin: 1rem 0.8rem 1rem auto;
   display: flex;
+  animation: chat-right 1s backwards;
+  animation-delay: 0.15s;
 }
 .images-chat-container .image {
   width: 4rem;
@@ -302,6 +322,7 @@ main::after {
   max-width: 100%;
   display: block;
   transition: 0.5s;
+  cursor: pointer;
 }
 .images-chat-container img:hover {
   transform: scale(1.5);
@@ -316,6 +337,7 @@ main::after {
   align-items: center;
   color: white;
   background: linear-gradient(90deg, #e942ff 0%, #8838ff 100%);
+  animation-delay: 0.75s;
 }
 .option label {
   width: 100%;
@@ -356,6 +378,9 @@ main::after {
   opacity: 0;
   background-color: #e570ff;
 }
+.option label .radio-button:checked ~ .custom-radio::before {
+  opacity: 1;
+}
 
 .box-message {
   width: 100%;
@@ -370,6 +395,9 @@ main::after {
   border: 0.1rem solid white;
   background-color: white;
 }
+.box-message::placeholder {
+  color: #c6cacd;
+}
 
 .description {
   max-width: 45rem;
@@ -377,13 +405,23 @@ main::after {
 }
 .description__heading, .description__text {
   margin: 0;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.31, 0.15, 0.56, 1.45);
+  animation-fill-mode: backwards;
 }
 .description__heading {
   margin-bottom: 2.4rem;
-  font-size: 3.5rem;
+  font-size: 4.2rem;
   line-height: 1.2;
   font-weight: 500;
   color: #3e2753;
+  animation-name: headingAnimation;
+  animation-timing-function: cubic-bezier(0.31, 0.15, 0.56, 1.45);
+}
+.description__text {
+  animation-name: textAnimation;
+  animation-delay: 0.3s;
+  animation-timing-function: linear;
 }
 @media only screen and (min-width: 1024px) {
   .description {
@@ -410,4 +448,51 @@ main::after {
   margin: 0 0.4rem;
   text-decoration: none;
   color: white;
+}
+
+@keyframes main-left {
+  0% {
+    top: -45%;
+  }
+}
+@keyframes main-right {
+  0% {
+    bottom: -45%;
+  }
+}
+@keyframes statusBar {
+  0% {
+    transform: translateX(-5rem);
+    opacity: 0;
+  }
+}
+@keyframes chat-left {
+  0% {
+    transform: translateX(-10rem);
+    opacity: 0;
+  }
+}
+@keyframes chat-right {
+  0% {
+    transform: translateX(10rem);
+    opacity: 0;
+  }
+}
+@keyframes messageBar {
+  0% {
+    transform: translateY(5rem);
+    opacity: 0;
+  }
+}
+@keyframes headingAnimation {
+  0% {
+    transform: translateX(10rem);
+    opacity: 0;
+  }
+}
+@keyframes textAnimation {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
 }

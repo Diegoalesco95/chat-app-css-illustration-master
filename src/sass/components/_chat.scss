@@ -1,6 +1,8 @@
 .chat-left,
 .chat-right {
-  & p {
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  & .chat-text {
     padding: 0 0.8rem;
     line-height: 1.5;
   }
@@ -13,6 +15,8 @@
   border-radius: 1rem 1rem 1rem 0.4rem;
   color: $color-chat-left;
   background-color: $color-background-chat;
+  animation-name: chat-left;
+  animation-delay: 0.25s;
 }
 
 .chat-right {
@@ -23,12 +27,16 @@
   box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.08);
   color: $color-chat-right;
   background-color: $color-white;
+  animation-name: chat-right;
+  animation-delay: 0.5s;
 }
 
 .images-chat-container {
   width: 14.4rem;
   margin: 1rem 0.8rem 1rem auto;
   display: flex;
+  animation: chat-right 1s backwards;
+  animation-delay: 0.15s;
   & .image {
     width: 4rem;
     border-radius: 0.8rem;
@@ -40,6 +48,7 @@
     max-width: 100%;
     display: block;
     transition: 0.5s;
+    cursor: pointer;
     &:hover {
       transform: scale(1.5);
     }
@@ -55,6 +64,7 @@
   align-items: center;
   color: $color-white;
   background: linear-gradient(90deg, $color-gradient-1 0%, $color-gradient-2 100%);
+  animation-delay: 0.75s;
   & label {
     width: 100%;
     display: flex;
@@ -92,6 +102,9 @@
         opacity: 0;
         background-color: $color-button-outline;
       }
+    }
+    & .radio-button:checked ~ .custom-radio::before {
+      opacity: 1;
     }
   }
 }

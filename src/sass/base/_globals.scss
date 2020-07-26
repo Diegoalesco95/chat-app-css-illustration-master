@@ -26,6 +26,9 @@ main {
     min-width: 51rem;
     position: absolute;
     z-index: -1;
+    animation-duration: 4s;
+    animation-delay: 0.6s;
+    animation-fill-mode: backwards;
   }
   &::before {
     border-radius: 0 0 50vw 50vw;
@@ -34,6 +37,7 @@ main {
     left: 50%;
     transform: translateX(-100%);
     background: linear-gradient(180deg, $color-gradient-1, $color-gradient-2);
+    animation-name: main-left;
     @include media(tablet) {
       transform: translateX(calc(-100% - 6.6rem));
     }
@@ -48,6 +52,7 @@ main {
     z-index: -1;
     transform: translate(100%);
     background-color: $color-background;
+    animation-name: main-right;
     @include media(tablet) {
       transform: translate(calc(100% + 5rem));
     }

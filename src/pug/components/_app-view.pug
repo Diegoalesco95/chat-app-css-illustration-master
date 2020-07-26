@@ -12,9 +12,9 @@
           span.more-icon
       .app__chat
         .chat-left
-          p That sounds great. I’d be happy with that.
+          p.chat-text That sounds great. I’d be happy with that.
         .chat-left
-          p Could you send over some pictures of your dog, please?
+          p.chat-text Could you send over some pictures of your dog, please?
         .images-chat-container
           .image
             img(src="./src/assets/images/dog-image-1.jpg", alt="alt")
@@ -23,11 +23,11 @@
           .image
             img(src="./src/assets/images/dog-image-3.jpg", alt="alt")
         .chat-right
-          p Here are a few pictures. She’s a happy girl!
+          p.chat-text Here are a few pictures. She’s a happy girl!
         .chat-right
-          p Can you make it?
+          p.chat-text Can you make it?
         .chat-left
-          p She looks so happy! The time we discussed works. How long shall I take her out for?
+          p.chat-text She looks so happy! The time we discussed works. How long shall I take her out for?
         form(name="options")
           .chat-left.option
             label
@@ -41,7 +41,7 @@
               span.message 1 hour walk
               span.price $49
               span.custom-radio
-      form.app__message
+      form(name="message").app__message
         input(type="text" placeholder="Type a message").box-message
-        button.send-button
+        button(type="submit").send-button
           span.send-icon
