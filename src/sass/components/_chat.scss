@@ -1,0 +1,110 @@
+.chat-left,
+.chat-right {
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  & .chat-text {
+    padding: 0 0.8rem;
+    line-height: 1.5;
+  }
+}
+
+.chat-left {
+  width: 16rem;
+  max-width: 12.8rem;
+  margin: 0.6rem 0.8rem 0.4rem;
+  border-radius: 1rem 1rem 1rem 0.4rem;
+  color: $color-chat-left;
+  background-color: $color-background-chat;
+  animation-name: chat-left;
+  animation-delay: 0.25s;
+}
+
+.chat-right {
+  width: auto;
+  max-width: 12.8rem;
+  margin: 0.6rem 0.8rem 0.4rem auto;
+  border-radius: 1rem 1rem 0.4rem 1rem;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.08);
+  color: $color-chat-right;
+  background-color: $color-white;
+  animation-name: chat-right;
+  animation-delay: 0.5s;
+}
+
+.images-chat-container {
+  width: 14.4rem;
+  margin: 1rem 0.8rem 1rem auto;
+  display: flex;
+  animation: chat-right 1s backwards;
+  animation-delay: 0.15s;
+  & .image {
+    width: 4rem;
+    border-radius: 0.8rem;
+    margin-right: 1rem;
+    overflow: hidden;
+  }
+  & img {
+    height: auto;
+    max-width: 100%;
+    display: block;
+    transition: 0.5s;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+}
+
+.option {
+  width: 16rem;
+  height: 100%;
+  padding: 0.7rem 1.6rem 0.7rem 0.8rem;
+  border-radius: 1rem 1rem 1rem 0.4rem;
+  display: flex;
+  align-items: center;
+  color: $color-white;
+  background: linear-gradient(90deg, $color-gradient-1 0%, $color-gradient-2 100%);
+  animation-delay: 0.75s;
+  & label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    & .radio-button {
+      position: absolute;
+      height: 0;
+      width: 0;
+      opacity: 0;
+    }
+    & .message {
+      flex-grow: 1;
+    }
+    & .price {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+    & .custom-radio {
+      order: -1;
+      width: 1.2rem;
+      height: 1.2rem;
+      margin-right: 0.8rem;
+      border-radius: 50%;
+      position: relative;
+      border: 0.1rem solid $color-button-outline;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0.3rem;
+        left: 0.3rem;
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 50%;
+        opacity: 0;
+        background-color: $color-button-outline;
+      }
+    }
+    & .radio-button:checked ~ .custom-radio::before {
+      opacity: 1;
+    }
+  }
+}

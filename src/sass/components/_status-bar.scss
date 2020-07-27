@@ -1,0 +1,29 @@
+.avatar {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 0.1rem solid $color-white;
+  & img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.name-avatar {
+  margin: 0 0.8rem;
+  line-height: 1;
+  flex-grow: 1;
+  h1 {
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: $color-white;
+  }
+  small {
+    color: $color-sub-heading;
+  }
+}

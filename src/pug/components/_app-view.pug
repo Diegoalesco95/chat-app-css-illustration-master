@@ -1,0 +1,47 @@
+.container__device
+  .container__device--screen
+    .app
+      .app__status-bar
+        span.less-icon
+        .avatar
+          img(src="./src/assets/images/avatar.jpg", alt="avatar")
+        .name-avatar
+          h1 Samuel Green
+          small Available to Walk
+        span.more-icon__container
+          span.more-icon
+      .app__chat
+        .chat-left
+          p.chat-text That sounds great. I’d be happy with that.
+        .chat-left
+          p.chat-text Could you send over some pictures of your dog, please?
+        .images-chat-container
+          .image
+            img(src="./src/assets/images/dog-image-1.jpg", alt="alt")
+          .image
+            img(src="./src/assets/images/dog-image-2.jpg", alt="alt")
+          .image
+            img(src="./src/assets/images/dog-image-3.jpg", alt="alt")
+        .chat-right
+          p.chat-text Here are a few pictures. She’s a happy girl!
+        .chat-right
+          p.chat-text Can you make it?
+        .chat-left
+          p.chat-text She looks so happy! The time we discussed works. How long shall I take her out for?
+        form(name="options")
+          .chat-left.option
+            label
+              input(type="radio").radio-button
+              span.message 30 minutes walk
+              span.price $29
+              span.custom-radio
+          .chat-left.option
+            label
+              input(type="radio").radio-button
+              span.message 1 hour walk
+              span.price $49
+              span.custom-radio
+      form(name="message").app__message
+        input(type="text" placeholder="Type a message").box-message
+        button(type="submit").send-button
+          span.send-icon

@@ -1,0 +1,91 @@
+.less-icon {
+  padding: 0.3rem;
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    width: 0.6rem;
+    height: 0.2rem;
+    margin: 0.2rem;
+    background-color: $color-white;
+  }
+  &:before {
+    transform: rotate(-60deg);
+  }
+  &:after {
+    transform: rotate(60deg);
+  }
+}
+
+.more-icon__container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  & .more-icon,
+  & .more-icon:before,
+  & .more-icon:after {
+    width: 0.2rem;
+    height: 0.2rem;
+    display: block;
+    border-radius: 50%;
+    background-color: $color-white;
+  }
+  & .more-icon {
+    &:before,
+    &:after {
+      content: '';
+    }
+    &:before {
+      margin-top: -0.3rem;
+    }
+    &:after {
+      margin-top: 0.4rem;
+    }
+  }
+  @include media(laptop) {
+    & .more-icon {
+      width: 2px;
+      height: 2px;
+      &:before {
+        width: 2px;
+        height: 2px;
+      }
+      &:after {
+        width: 2px;
+        height: 2px;
+      }
+    }
+  }
+}
+
+.send-button {
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: $color-button-background;
+  & .send-icon {
+    display: inline-block;
+    &:before,
+    &:after {
+      content: '';
+      width: 0.7rem;
+      height: 0.2rem;
+      margin: 0.2rem;
+      display: block;
+      background-color: $color-white;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}

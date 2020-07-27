@@ -1,0 +1,56 @@
+// Main Animations
+
+@keyframes main-left {
+  0% {
+    top: -45%;
+  }
+}
+
+@keyframes main-right {
+  0% {
+    bottom: -45%;
+  }
+}
+
+// Animation Status Bar
+
+@keyframes statusBar {
+  0% {
+    transform: translateX(-5rem);
+    opacity: 0;
+  }
+}
+@keyframes chat-left {
+  0% {
+    transform: translateX(-10rem);
+    opacity: 0;
+  }
+}
+@keyframes chat-right {
+  0% {
+    transform: translateX(10rem);
+    opacity: 0;
+  }
+}
+
+@keyframes messageBar {
+  0% {
+    transform: translateY(5rem);
+    opacity: 0;
+  }
+}
+
+//  Description Animations
+
+@keyframes headingAnimation {
+  0% {
+    transform: translateX(10rem);
+    opacity: 0;
+  }
+}
+@keyframes textAnimation {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "chat-app-css-illustration-master",
+  "version": "1.0.0",
+  "description": "Design for the Chat app CSS illustration coding challenge",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diegoalesco95/chat-app-css-illustration-master.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Diego Osorio <Diegoalesco95@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Diegoalesco95/chat-app-css-illustration-master/issues"
+  },
+  "homepage": "https://github.com/Diegoalesco95/chat-app-css-illustration-master#readme"
+}
