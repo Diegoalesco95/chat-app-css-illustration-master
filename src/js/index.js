@@ -14,6 +14,7 @@ class ChatApp {
     this.CLASS_TEXT = 'chat-text';
     this.getElements();
   }
+  // Init ChatApp
   init() {
     this.eventsHandlers();
   }
